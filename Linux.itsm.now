@@ -1,0 +1,23 @@
+plugin: servicenow.itsm.now
+table: 	cmdb_ci_linux_server
+query:
+  - u_application: LIKE 07729e68dbe8305039014b4913961991
+    install_status: IN 3,1,10,-5
+columns:
+  - fqdn
+  - ip_address
+  - location
+  - u_application
+  - u_environment
+  - install_status
+  - os
+  - os_version
+  - cpu_count
+  - ram
+compose:
+  ram: ram|replace(',','')
+keyed_groups:
+  - key: u_environment
+    prefix: env
+  - key: os
+    prefix: os
