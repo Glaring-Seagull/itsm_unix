@@ -1,6 +1,13 @@
 plugin: servicenow.itsm.now
 table: 	cmdb_ci_linux_server
 username: "{{ SN_USERNAME }}"
-password: "{{ SN_USERNAME }}"
+password: "{{ SN_PASSWORD }}"
 host: "{{ SN_HOST }}"
 fields: [fqdn,ip_address,location,u_application,u_environment,install_status,os,os_version,cpu_count,ram]
+compose:
+  ram: ram|replace(',','')
+keyed_groups:
+  - key: u_environment
+    prefix: env
+  - key: os
+    prefix: os
