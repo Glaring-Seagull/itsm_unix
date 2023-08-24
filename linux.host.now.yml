@@ -3,7 +3,6 @@ table: cmdb_ci_linux_server
 username: "{{ SN_USERNAME }}"
 password: "{{ SN_PASSWORD }}"
 host: "{{ SN_HOST }}"
-fields: [fqdn, ip_address, location, u_application, u_environment, install_status, os, os_version, cpu_count, ram]
 query:
   - install_status: LIKE Operational
 keyed_groups:
