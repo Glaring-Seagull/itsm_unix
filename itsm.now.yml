@@ -1,7 +1,5 @@
 plugin: servicenow.itsm.now
 table: cmdb_ci_linux_server
-query:
-  - install_status: IN 3,1,10,-5
 columns:
   - fqdn
   - ip_address
@@ -13,3 +11,11 @@ columns:
   - os_version
   - cpu_count
   - ram
+compose:
+  ram: ram|replace(',','')
+group_by:
+  manufactures:
+    os:
+      includes:
+        - Linux Red Hat
+        - Linux Centos
