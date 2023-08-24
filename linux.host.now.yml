@@ -4,8 +4,8 @@ username: "{{ SN_USERNAME }}"
 password: "{{ SN_PASSWORD }}"
 host: "{{ SN_HOST }}"
 fields: [fqdn,ip_address,location,u_application,u_environment,install_status,os,os_version,cpu_count,ram]
-compose:
-  ram: ram|replace(',','')
+query:
+  - install_status: IS Operational
 keyed_groups:
   - key: u_environment
     prefix: env
