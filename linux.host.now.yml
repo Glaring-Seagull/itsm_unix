@@ -5,7 +5,7 @@ password: "{{ SN_PASSWORD }}"
 host: "{{ SN_HOST }}"
 fields: [fqdn,ip_address,location,u_application,u_environment,install_status,os,os_version,cpu_count,ram]
 query:
-  - install_status: Operational
+  - install_status: IN 3,1,10,-5
 keyed_groups:
   - key: u_environment
     prefix: env
