@@ -10,3 +10,7 @@ keyed_groups:
     prefix: env
   - key: os
     prefix: os
+  - key:
+    prefix: class
+  - key:
+    prefix: install_status
