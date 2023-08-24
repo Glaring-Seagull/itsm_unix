@@ -1,0 +1,7 @@
+plugin: servicenow.itsm.now
+group_by:
+  manufactures:
+    os:
+      includes:
+        - Linux Red Hat
+        - Linux Centos
