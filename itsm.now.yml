@@ -1,18 +1,5 @@
 plugin: servicenow.itsm.now
 table: cmdb_ci_linux_server
-columns:
-  - fqdn
-  - ip_address
-  - location
-  - u_application
-  - u_environment
-  - install_status
-  - os
-  - os_version
-  - cpu_count
-  - ram
-compose:
-  ram: ram|replace(',','')
 group_by:
   manufactures:
     os:
