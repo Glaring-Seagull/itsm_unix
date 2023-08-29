@@ -4,13 +4,11 @@ username: "{{ SN_USERNAME }}"
 password: "{{ SN_PASSWORD }}"
 host: "{{ SN_HOST }}"
 query:
-  - install_status: IN 10
+  - install_status: IN 10,1,-5
+  - support_group: 0faae632b87528002423a09f7f4251b7
+
 keyed_groups:
   - key: u_environment
     prefix: env
-  - key: os
-    prefix: os
-  - key:
-    prefix: class
-  - key:
-    prefix: install_status
+  - key: u_application
+    prefix: application
