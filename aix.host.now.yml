@@ -1,0 +1,15 @@
+plugin: servicenow.itsm.now
+table: cmdb_ci_aix_server
+username: "{{ SN_USERNAME }}"
+password: "{{ SN_PASSWORD }}"
+host: "{{ SN_HOST }}"
+query:
+  - install_status: IN 10,1,-5
+
+keyed_groups:
+  - key: u_environment
+    prefix: env
+  - key: os
+    prefix: os
+  - key: u_application
+    prefix: application
