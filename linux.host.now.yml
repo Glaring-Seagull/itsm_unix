@@ -3,9 +3,7 @@ table: cmdb_ci_linux_server
 username: "{{ SN_USERNAME }}"
 password: "{{ SN_PASSWORD }}"
 host: "{{ SN_HOST }}"
-query:
-  - install_status: IN 10
-sysparm_query: 'host_nameNOT LIKEadmin'
+sysparm_query: 'host_nameNOT LIKEadmin^install_status=10'
 keyed_groups:
   - key: u_environment
     prefix: env
