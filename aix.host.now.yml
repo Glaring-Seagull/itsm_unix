@@ -3,9 +3,7 @@ table: cmdb_ci_aix_server
 username: "{{ SN_USERNAME }}"
 password: "{{ SN_PASSWORD }}"
 host: "{{ SN_HOST }}"
-query:
-  - install_status: IN 10,1,-5
-
+sysparm_query: 'ost_nameNOT LIKEadmin^ORhost_nameNOT LIKEntnx^install_status=10^ORinstall_status=-5^support_group=0faae632b87528002423a09f7f4251b7'
 keyed_groups:
   - key: u_environment
     prefix: env
