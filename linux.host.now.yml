@@ -5,7 +5,7 @@ password: "{{ SN_PASSWORD }}"
 host: "{{ SN_HOST }}"
 query:
   - install_status: IN 10
-  - host_name: NOT admin
+sysparm_query: 'host_nameNOT LIKEadmin'
 keyed_groups:
   - key: u_environment
     prefix: env
