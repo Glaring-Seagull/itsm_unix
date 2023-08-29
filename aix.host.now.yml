@@ -11,5 +11,3 @@ keyed_groups:
     prefix: env
   - key: os
     prefix: os
-  - key: u_application
-    prefix: application
