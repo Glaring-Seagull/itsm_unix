@@ -10,5 +10,7 @@ query:
 keyed_groups:
   - key: u_environment
     prefix: env
+  - key: os
+    prefix: os
   - key: u_application
     prefix: application
